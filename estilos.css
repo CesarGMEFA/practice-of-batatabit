@@ -1,0 +1,473 @@
+:root {
+    --font-inter: "Inter", sans-serif;
+    --font-DM: 'DM Sans', sans-serif;
+    --bold: 700;
+    --medium: 500;
+    --bitcoin-orange: #f7931a;
+    --soft-orange: #ffe9d5;
+    --secondary-blue: #1a9af7;
+    --soft-blue: #d4edff;
+    --warm-black: #282623;
+    --black: #201e1c;
+    --grey: #bababa;
+    --grey-p: #808080;
+    --off-white: #faf8f7;
+    --just-white: #fff;
+}
+html {
+    font-size: 62.5%;
+    font-family: var(--font-DM);
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.header {
+    width: 100%;
+    min-width: 28rem;
+    height: 33.4rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+.header > img{
+    width: 150px;
+    height: 24px;
+    margin-top: 50px;
+}
+.header_title {
+    width: 70%;
+    min-width: 280px;
+    height: 218px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    text-align: center;
+    align-self: center;
+    position: relative;
+}
+.header_title > h1 {
+    color: var(--just-white);
+    font-size: 2.4rem;
+    font-weight: var(--bold);
+    margin: 40px 0 0;
+}
+
+.header_title > p {
+    color: var(--soft-orange);
+    font-size: 1.4rem;
+    font-weight: var(--medium);
+    margin: 40px 0 0 0;
+}
+.header .header_title .header_title-buttom {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    width: 228px;
+    height: 20px;
+    padding: 15px 5px;
+    display: block;
+    position: absolute;
+    top: 193px;
+    left: calc(50% - 119px);
+    background-color: var(--off-white);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgb(89 73 30 / 16%);
+}
+.header .header_title-buttom > span{
+    width: 13px;
+    height: 8px;
+    display: inline-block;
+    background-image: url(./assets/icons/down-arrow.svg);
+}
+
+
+
+
+
+.main {
+    background-color: var(--off-white);
+    width: 100%;
+}
+.main_tasas {
+    padding: 80px 0 50px;
+    text-align: center;
+}
+.main_tasas .imagen_btc {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(./assets/img/Bitcoin.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main_tasas-info {
+    width: 85%;
+    min-width: 265px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    text-align: center;
+    align-self: center;
+}
+.main_tasas-info > h2 {
+    color: var(--black);
+    font-weight: var(--bold);
+    font-size: 2.4rem;
+}
+.main_tasas-info p {
+    color: var(--grey-p);
+    font-weight: var(--medium);
+    margin: 0 20px 30px;
+}
+
+
+/* Estilos de las tablas de precios y comisiones */
+
+.main_tasas-tablas {
+    font-family: var(--font-inter);
+}
+
+.main_tasas-tablas .monedas,
+.main_tasas-tablas .comsiones {
+    width: 70%;
+    min-width: 240px;
+    max-width: 345px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.main_tasas-tablas .monedas > h2,
+.main_tasas-tablas .comsiones > h2 {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin: 0 0 10px;
+    grid-column: 1/-1;
+}
+.main_tasas-tablas .monedas > h2 {
+    color: var(--bitcoin-orange);
+}
+.main_tasas-tablas .comsiones > h2 {
+    color: var(--secondary-blue);
+}
+
+.main_tasas-tablas .left,
+.main_tasas-tablas .right {
+    margin: 0;
+    padding: 20px 15px;
+}
+.main_tasas-tablas .left {
+    background-color: var(--just-white);
+    color: var(--grey);
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: var(--medium);
+}
+.main_tasas-tablas .right {
+    background-color: var(--just-white);
+    color: var(--grey-p);
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: var(--medium);
+}
+
+.main_tasas-tablas .monedas .arrow-down > span,
+.main_tasas-tablas .monedas .arrow-up > span {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main_tasas-tablas .monedas .arrow-down > span {
+    background-image: url(./assets/icons/trending-down.svg);
+}
+.main_tasas-tablas .monedas .arrow-up > span {
+    background-image: url(./assets/icons/trending-up.svg);
+}
+
+.main_tasas-tablas .left-up {
+    border-radius: 15px 0 0 0;
+}
+.main_tasas-tablas .right-up {
+    border-radius: 0 15px 0 0;
+}
+.main_tasas-tablas .right-down {
+    border-radius: 0 0 15px 0;
+}
+.main_tasas-tablas .left-down {
+    border-radius: 0 0 0 15px;
+}
+
+
+.main_tasas-tablas .live {
+    margin: 12px auto 0;
+    padding: 8px 26px;
+    color: var(--warm-black);
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    border-radius: 8px;
+
+    grid-column: span 2;
+}
+.main_tasas-tablas .monedas .live {
+    background-color: var(--soft-orange);
+}
+.main_tasas-tablas .comsiones .live {
+    background-color: var(--soft-blue);
+}
+
+/* Fin de los estilos de las tablas de predios y comisiones.
+
+AHORA iniciaremos con la otra seccion de la pagina, las cartas */
+
+.main_detalles {
+    width: 100%;
+    padding: 40px 0 30px;
+    text-align: center;
+    background-color: var(--black);
+    position: relative;
+}
+.main_detalles .batata {
+    width: 40px;
+    height: 25px;
+    background-image: url(./assets/icons/batata.svg);
+    position: absolute;
+    top: -12px;
+    left: calc(50% - 20px);
+}
+.main_detalles > h2 {
+    color: var(--just-white);
+    font-size: 2.4rem;
+    font-weight: var(--bold);
+    margin: 10px 0;
+}
+.main_detalles > p {
+    color: var(--grey-p);
+    font-size: 1.4rem;
+    list-style: 2.1rem;
+    font-weight: var(--medium);
+    margin: 0 0 30px;
+}
+
+.main_detalles--cards .card {
+    max-width: 400px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: initial;
+    background-color: var(--warm-black);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 16%);
+}
+
+.main_detalles--cards .card .card_icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main_detalles--cards .card .watch {
+    background-image: url(./assets/icons/clock.svg);
+}
+.main_detalles--cards .card .eye {
+    background-image: url(./assets/icons/eye.svg);
+}
+.main_detalles--cards .card .dollar {
+    background-image: url(./assets/icons/dollar-sign.svg);
+}
+.main_detalles--cards .card .check {
+    background-image: url(./assets/icons/check-circle.svg);
+}
+
+.main_detalles--cards .card > p:nth-child(2) {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: var(--bold);
+    color: var(--just-white);
+}
+.main_detalles--cards .card > p:nth-child(3) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: var(--medium);
+    color: var(--grey-p);
+}
+
+
+/* Fin de los estilos de carta
+ ahora la seccion de la foto con texto en
+ el centro */
+
+ .main_imagen {
+     width: 100%;
+     min-width: 300px;
+     height: 50vh;
+     text-align: center;
+     background-image: url(./assets/img/bitcoinbaby2x.jpg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     overflow: hidden;
+ }
+ .main_imagen > h2 {
+     font-size: 2.4rem;
+     line-height: 2.6rem;
+     font-weight: var(--bold);
+     color: var(--just-white);
+     margin-top: 60px;
+ }
+
+
+ /* Fin de los estilos de la imagen.
+    Ahora estilos de los planes. 
+*/
+
+.main_planes {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.main_planes--text {
+    margin: 0 35px;
+}
+.main_planes--text > h2 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: var(--bold);
+    color: var(--black);
+}
+.main_planes--text > p {
+    font-weight: var(--medium);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--grey-p);
+}
+
+.main_planes--slides {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.main_planes--slides::-webkit-scrollbar {
+    background-color: var(--soft-orange);
+    height: 3px;
+}
+.main_planes--slides::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orange);
+}
+.main_planes--slides .plan {
+    scroll-snap-align: center;
+    margin: 50px 10px 30px;
+    padding: 0 15px;
+    min-width: 190px;
+    max-width: 210px;
+    height: 250px;
+    background-color: var(--just-white);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgb(89 73 30 / 16%);
+    position: relative;
+}
+.main_planes--slides .plan > p {
+    padding: 10px 15px;
+    color: var(--just-white);
+    font-size: 1.2rem;
+    background: var(--bitcoin-orange);
+    border-radius: 8px;
+    position: absolute;
+    top: -28px;
+    left: 25%;
+}
+.main_planes--slides .plan .plan_info > h3 {
+    margin: 30px 0 15px;
+    color: var(--black);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: var(--bold);
+}
+.main_planes--slides .plan .plan_info .plan_info--price {
+    padding: 5px 0;
+    margin: 0;
+    color: var(--black);
+    font-weight: var(--bold);
+    font-size: 5.2rem;
+    line-height: 5.3rem;
+    position: relative;
+}
+.main_planes--slides .plan .plan_info .plan_info--price sup {
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    position: absolute;
+    top: 10px;
+    left: calc( 50% - 40px);
+}
+.main_planes--slides .plan .plan_info > .ahorro {
+    color: var(--grey-p);
+    font-size: 1.2rem;
+    font-family: var(--font-inter);
+    font-weight: var(--medium);
+    margin: 0 0 15px;
+}
+.main_planes--slides .plan_info .plan_info--cta {
+    padding: 12px 20px;
+    margin-top: 48px;
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    background-color: var(--off-white);
+    border: var(--bitcoin-orange) 2px solid;
+    border-radius: 4px;
+    display: inline-block;
+}
+.main_planes--slides .plan_info .cta_recomendado {
+    margin-top: 6px;
+}
+
+/* Fin de los estilos de los planes. */
+
+/* Inicio de los estilos del footer */
+
+.footer {
+    width: 100%;
+    background-color: var(--bitcoin-orange);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer ul {
+    list-style: none;
+}
+.footer ul li {
+    margin: 10px 0;
+}
+.footer ul li a {
+    color: var(--just-white);
+    font-size: 1.4rem;
+    font-weight: var(--medium);
+}
+.footer > span {
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+    background-image: url(./assets/img/logo-footer.svg);
+    background-repeat: no-repeat;
+}
