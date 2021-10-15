@@ -438,6 +438,13 @@ AHORA iniciaremos con la otra seccion de la pagina, las cartas */
     border-radius: 4px;
     display: inline-block;
 }
+.main_planes--slides .plan_info .plan_info--cta span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+}
 .main_planes--slides .plan_info .cta_recomendado {
     margin-top: 6px;
 }
@@ -466,7 +473,7 @@ AHORA iniciaremos con la otra seccion de la pagina, las cartas */
     font-weight: var(--medium);
 }
 .footer > span {
-    width: 60px;
+    width: 64px;
     height: 50px;
     display: inline-block;
     background-image: url(./assets/img/logo-footer.svg);
